@@ -20,7 +20,10 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-document.getElementById("my_audio").play();
+(function ($) {
+    "use strict";
+      $('.music').sakura(document.getElementById("my_audio").play());
+})(jQuery);
 
 // Set the date we're counting down to
 var countDownDate = new Date("Nov 3, 2022 00:00:00").getTime();
