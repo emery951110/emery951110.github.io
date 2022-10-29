@@ -22,7 +22,7 @@
  */
 $(document).on('click', function(){
     document.getElementById("my_audio").play();
-    var vid = document.getElementById("my_");
+    var vid = document.getElementById("my_audio");
     vid.volume = 0.2;
     console.log('Shaadi me zaroor aana');
 });
