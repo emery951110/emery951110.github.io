@@ -25,10 +25,9 @@ $(document).on('click', function(){
     console.log('Shaadi me zaroor aana');
 });
 
-/**$(document).ready(function(){
+$(document).ready(function(){
     document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor aana');
-});*/
+});
 // Set the date we're counting down to
 var countDownDate = new Date("Nov 3, 2022 00:00:00").getTime();
 
