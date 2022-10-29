@@ -28,7 +28,7 @@ $(document).on('click', function(){
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 30, 2022 00:58:00").getTime();
+var countDownDate = new Date("Nov 3, 2022 00:00:00").getTime();
 // Update the count down every 1 second
 var x = setInterval(function() {
     // Get todays date and time
@@ -36,7 +36,7 @@ var x = setInterval(function() {
     
     // Find the distance between now and the count down date
     //var distance = countDownDate - now;
-    var distance = Math.abs(now-countDownDate);
+    var distance = Math.abs(countDownDate-now);
     
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -48,7 +48,7 @@ var x = setInterval(function() {
     document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
     
     // If the count down is over, write some text 
-    if (distance >= 0) {
+    if (distance <= 0) {
         clearInterval(x);
         window.location.replace("https://emery951110.github.io/index2.html");
     }
