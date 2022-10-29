@@ -24,10 +24,21 @@
     document.getElementById("my_audio").play();
     console.log('Shaadi me zaroor aana');
 });*/
-$(document).ready(function(){
+ var source = "./assets/TypaGirl.mp3
+ var audio = document.createElement("audio");
+ //
+ audio.autoplay = true;
+ //
+ audio.load()
+ audio.addEventListener("load", function() { 
+     audio.play(); 
+ }, true);
+ audio.src = source;
+
+/**$(document).ready(function(){
     document.getElementById("my_audio").play();
     console.log('Shaadi me zaroor aana');
-});
+});*/
 // Set the date we're counting down to
 var countDownDate = new Date("Nov 3, 2022 00:00:00").getTime();
 
