@@ -20,20 +20,10 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-/** $(document).on('click', function(){
+$(document).on('click', function(){
     document.getElementById("my_audio").play();
     console.log('Shaadi me zaroor aana');
-});*/
- var source = "./assets/TypaGirl.mp3
- var audio = document.createElement("audio");
- //
- audio.autoplay = true;
- //
- audio.load()
- audio.addEventListener("load", function() { 
-     audio.play(); 
- }, true);
- audio.src = source;
+});
 
 /**$(document).ready(function(){
     document.getElementById("my_audio").play();
