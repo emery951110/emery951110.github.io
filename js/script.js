@@ -50,7 +50,7 @@ var x = setInterval(function() {
     
     // If the count down is over, write some text 
     if (distance < 0) {
-        clearInterval(x);
+        //clearInterval(x);
         window.location.replace("https://emery951110.github.io/index2.html");
     }
 }, 1000);
