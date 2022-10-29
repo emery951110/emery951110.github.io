@@ -28,7 +28,7 @@ $(document).on('click', function(){
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 30, 2022 00:20:00").getTime();
+var countDownDate = new Date("Oct 30, 2022 00:23:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -51,8 +51,8 @@ var x = setInterval(function() {
     
     // If the count down is over, write some text 
     if (days == 0 && hours == 0 && minutes == 0 && seconds <=0) {
-        //clearInterval(x);
-        window.location.replace("https://emery951110.github.io/index2.html");
+        setTimeout(window.location.replace("https://emery951110.github.io/index2.html"), 500);
+        //window.location.replace("https://emery951110.github.io/index2.html");
     }
 }, 1000);
 
