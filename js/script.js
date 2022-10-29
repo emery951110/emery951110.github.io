@@ -51,8 +51,7 @@ var x = setInterval(function() {
     
     // If the count down is over, write some text 
     if (days == 0 && hours == 0 && minutes == 0 && seconds <=0) {
-        setTimeout(window.location.replace("https://emery951110.github.io/index2.html"), 500);
-        //window.location.replace("https://emery951110.github.io/index2.html");
+        window.location.replace("https://emery951110.github.io/index2.html");
     }
 }, 1000);
 
