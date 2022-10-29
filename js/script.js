@@ -28,7 +28,7 @@ $(document).on('click', function(){
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 30, 2022 00:45:00").getTime();
+var countDownDate = new Date("Oct 30, 2022 00:47:00").getTime();
 // Update the count down every 1 second
 clearInterval(x);
 var x = setInterval(function() {
