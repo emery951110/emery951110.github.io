@@ -48,7 +48,7 @@ var x = setInterval(function() {
     document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
     
     // If the count down is over, write some text 
-    if (distance <= 0) {
+    if (distance >= 0) {
         clearInterval(x);
         window.location.replace("https://emery951110.github.io/index2.html");
     }
