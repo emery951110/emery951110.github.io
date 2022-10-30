@@ -350,6 +350,11 @@
 
 /*******************************/
 
+div {
+   word-wrap: break-word;
+   width: 200px;
+}
+
 body {
 	font-family: Arial, Helvetica, Sans-serif;
 }
