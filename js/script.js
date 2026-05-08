@@ -20,16 +20,25 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-$(document).on('click', function(){
-    var vid = document.getElementById("my_audio");
-    vid.volume = 0.7;
-    document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor aana');
-});
+function playBackgroundMusic() {
+    var audio = document.getElementById("my_audio");
+    if (!audio) {
+        return;
+    }
+
+    audio.volume = 0.7;
+    audio.play().catch(function () {
+        $(document).one('click touchstart keydown', playBackgroundMusic);
+    });
+}
+
+$(playBackgroundMusic);
 
 // Set the date we're counting down to
 var countDownDate = new Date("May 9, 2026 01:54:00").getTime();
+var timeElement = document.getElementById("time");
 // Update the count down every 1 second
+if (timeElement) {
 var x = setInterval(function() {
     // Get todays date and time
     var now = new Date().getTime();
@@ -45,7 +54,7 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
-    document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
+    timeElement.innerHTML = "<div class='container'><div class='days block'>"+ days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
     
     // If the count down is over, write some text 
     if (distance <= 0) {
@@ -53,6 +62,7 @@ var x = setInterval(function() {
         window.location.replace("https://emery951110.github.io/index2.html");
     }
 }, 1000);
+}
 
 // being a bit cool :p  
 var styles = [
